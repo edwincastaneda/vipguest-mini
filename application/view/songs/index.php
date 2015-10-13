@@ -2,7 +2,7 @@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
     <div class="row">
         <ol class="breadcrumb">
-            <li><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="<?php echo URL; ?>dashboard"><span class="glyphicon glyphicon-home"></span></a></li>
             <li class="active"><?php echo $_GET['url']; ?></li>
         </ol>
     </div>
@@ -11,8 +11,6 @@
             <h3>Add a song</h3>
         </div>
     </div>
-
-
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -38,8 +36,8 @@
 
                 </div>
             </div>
-        </div><!-- /.col-->
-    </div><!-- /.row -->
+        </div>
+    </div>
 
 
 
@@ -54,8 +52,7 @@
                                 <th data-sortable="true">Artist</th>
                                 <th data-sortable="true">Track</th>
                                 <th data-sortable="true">Link</th>
-                                <th data-sortable="true">DELETE</th>
-                                <th data-sortable="true">EDIT</th>
+                                <th data-sortable="false" data-align="center"><span class="glyphicon glyphicon-cog"></span></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -69,8 +66,13 @@
                                             <a href="<?php echo htmlspecialchars($song->link, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($song->link, ENT_QUOTES, 'UTF-8'); ?></a>
                                         <?php } ?>
                                     </td>
-                                    <td><a href="<?php echo URL . 'songs/deletesong/' . htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
-                                    <td><a href="<?php echo URL . 'songs/editsong/' . htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>
+                                    <td>
+                                        <form id="edit" method="POST" action="<?php echo URL . 'songs/editsong/' . htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8'); ?>">
+                                        <input name="url" type="hidden" value="songs"/>
+                                        <a href="javascript:{}" onclick="document.getElementById('edit').submit(); return false;"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;
+                                        <a onclick="return confirm('Are you sure you want to delete this item?');" href="<?php echo URL . 'songs/deletesong/' . htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8'); ?>"><span class="glyphicon glyphicon-remove"></span></a>&nbsp;
+                                        </form>
+                                    </td>
                                 </tr>
                             <?php } ?>
                         </tbody>

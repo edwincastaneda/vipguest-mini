@@ -1,8 +1,10 @@
+<?php 
 
+?>
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <ul class="nav menu">
         <li class="<?php if ($_GET['url'] == "dashboard") echo "active"; ?>"><a href="<?php echo URL; ?>dashboard"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
-        <li class="<?php if ($_GET['url'] == "songs") echo "active"; ?>"><a href="<?php echo URL; ?>songs"><span class="glyphicon glyphicon-dashboard"></span> Songs</a></li>
+        <li class="<?php if ((isset($_GET['url']) && $_GET['url']== "songs") || (isset($_POST['url']) && $_POST['url']== "songs")) echo "active"; ?>"><a href="<?php echo URL; ?>songs"><span class="glyphicon glyphicon-dashboard"></span> Songs</a></li>
     <!--<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> Alerts &amp; Panels</a></li>
         <li class="parent ">
             <a href="#">

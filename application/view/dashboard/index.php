@@ -18,7 +18,7 @@
                         <em class="glyphicon glyphicon-comment glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">8</div>
+                        <div class="large"><?php echo $this->song->getAmountOfSongs(); ?></div>
                         <div class="text-muted">Saludos</div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                         <em class="glyphicon glyphicon-gift glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">20</div>
+                        <div class="large"><?php echo $this->song->getAmountOfSongs(); ?></div>
                         <div class="text-muted">Regalos</div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <em class="glyphicon glyphicon-cloud-upload glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">24</div>
+                        <div class="large"><?php echo $this->song->getAmountOfSongs(); ?></div>
                         <div class="text-muted">Fotos</div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <em class="glyphicon glyphicon-headphones glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">30</div>
+                        <div class="large"><?php echo $this->song->getAmountOfSongs(); ?></div>
                         <div class="text-muted">Música</div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
 
             <div class="panel panel-blue">
                 <div class="panel-heading" style="background:#ffb53e;"><span class="glyphicon glyphicon-gift"></span>Regalos</div>
-                <div class="panel-body" style="height:300px; overflow:auto; background:white;">
+                <div class="panel-body" style="overflow:auto; background:white;">
                     <ul class="todo-list">
                         <li class="todo-list-item">
                             <div class="checkbox">
