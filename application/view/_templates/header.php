@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>MINI</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>VIPGUEST - ADMIN</title>
 
-    <!-- JS -->
-    <!-- please note: The JavaScript files are loaded in the footer to speed up page construction -->
-    <!-- See more here: http://stackoverflow.com/q/2105327/1114320 -->
+        <link href="<?php echo URL; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo URL; ?>css/datepicker3.css" rel="stylesheet">
+        <link href="<?php echo URL; ?>css/bootstrap-table.css" rel="stylesheet">
+        <link href="<?php echo URL; ?>css/styles.css" rel="stylesheet">
 
-    <!-- CSS -->
-    <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
-</head>
-<body>
-       
-    <!-- logo -->
-    <div class="logo">
-        MINI
-    </div>
+        <!--[if lt IE 9]>
+        <script src="<?php echo URL; ?>js/html5shiv.js"></script>
+        <script src="<?php echo URL; ?>js/respond.min.js"></script>
+        <![endif]-->
+
+        <style>
+            .text-white{color:#fff !important;}
+            .text-red{color:red!important;}
+            .text-green{color:chartreuse !important;}
+            .text-black{color:black !important;}
+        </style>
+
+    </head>
+
+ 
+        

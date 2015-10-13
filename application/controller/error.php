@@ -21,4 +21,16 @@ class Error extends Controller
         require APP . 'view/error/index.php';
         require APP . 'view/_templates/footer.php';
     }
+    
+    public function notfound(){
+            require APP . 'view/_templates/header.php';
+            require APP . 'view/error/notfound.php';
+            require APP . 'view/_templates/footer.php';
+    }
+    
+    public function incomplete(){
+            require APP . 'view/_templates/header.php';
+            require APP . 'view/error/incomplete.php';
+            require APP . 'view/_templates/footer.php';
+    }
 }

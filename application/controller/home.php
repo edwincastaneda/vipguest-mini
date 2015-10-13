@@ -13,10 +13,7 @@ class Home extends Controller
 
     public function index()
     {
-        require APP . 'view/_templates/header.php';
-        require APP . 'view/_templates/nav.php';
         require APP . 'view/index.php';
-        require APP . 'view/_templates/footer.php';
     }
     
 }

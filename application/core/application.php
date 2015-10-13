@@ -48,11 +48,11 @@ class Application {
                     // no action defined: call the default index() method of a selected controller
                     $this->url_controller->index();
                 } else {
-                    header('location: ' . URL . 'error');
+                    header('location: ' . URL . 'error/notfound/');
                 }
             }
         } else {
-            header('location: ' . URL . 'error');
+            header('location: ' . URL . 'error/incomplete/');
         }
     }
 

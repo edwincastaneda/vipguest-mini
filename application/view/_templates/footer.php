@@ -1,15 +1,26 @@
+	<script src="<?php echo URL;?>js/jquery-1.11.1.min.js"></script>
+	<script src="<?php echo URL;?>js/bootstrap.min.js"></script>
+	<script src="<?php echo URL;?>js/chart.min.js"></script>
+	<script src="<?php echo URL;?>js/chart-data.js"></script>
+	<script src="<?php echo URL;?>js/easypiechart.js"></script>
+	<script src="<?php echo URL;?>js/easypiechart-data.js"></script>
+	<script src="<?php echo URL;?>js/bootstrap-datepicker.js"></script>
+	<script src="<?php echo URL;?>js/bootstrap-table.js"></script>
+	<script>
+		$('#calendar').datepicker({
+		});
 
-<!-- jQuery, loaded in the recommended protocol-less way -->
-    <!-- more http://www.paulirish.com/2010/the-protocol-relative-url/ -->
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
 
-    <!-- define the project's URL (to make AJAX calls possible, even when using this in sub-folders etc) -->
-    <script>
-        var url = "<?php echo URL; ?>";
-    </script>
-
-    <!-- our JavaScript -->
-    <script src="<?php echo URL; ?>js/application.js"></script>
-    
-</body>
-</html>
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
