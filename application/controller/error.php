@@ -17,20 +17,20 @@ class Error extends Controller
     public function index()
     {
         // load views
-        require APP . 'view/_templates/header.php';
+        require APP . 'view/_templates/admin/header.php';
         require APP . 'view/error/index.php';
-        require APP . 'view/_templates/footer.php';
+        require APP . 'view/_templates/admin/footer.php';
     }
     
     public function notfound(){
-            require APP . 'view/_templates/header.php';
+            require APP . 'view/_templates/admin/header.php';
             require APP . 'view/error/notfound.php';
-            require APP . 'view/_templates/footer.php';
+            require APP . 'view/_templates/admin/footer.php';
     }
     
     public function incomplete(){
-            require APP . 'view/_templates/header.php';
+            require APP . 'view/_templates/admin/header.php';
             require APP . 'view/error/incomplete.php';
-            require APP . 'view/_templates/footer.php';
+            require APP . 'view/_templates/admin/footer.php';
     }
 }

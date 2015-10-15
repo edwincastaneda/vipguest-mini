@@ -18,7 +18,7 @@
                         <em class="glyphicon glyphicon-comment glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large"><?php echo $this->song->getAmountOfSongs(); ?></div>
+                        <div class="large"><?php echo $this->model->getAmountOfSongs(); ?></div>
                         <div class="text-muted">Saludos</div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                         <em class="glyphicon glyphicon-gift glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large"><?php echo $this->song->getAmountOfSongs(); ?></div>
+                        <div class="large"><?php echo $this->model->getAmountOfSongs(); ?></div>
                         <div class="text-muted">Regalos</div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <em class="glyphicon glyphicon-cloud-upload glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large"><?php echo $this->song->getAmountOfSongs(); ?></div>
+                        <div class="large"><?php echo $this->model->getAmountOfSongs(); ?></div>
                         <div class="text-muted">Fotos</div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <em class="glyphicon glyphicon-headphones glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large"><?php echo $this->song->getAmountOfSongs(); ?></div>
+                        <div class="large"><?php echo $this->model->getAmountOfSongs(); ?></div>
                         <div class="text-muted">Música</div>
                     </div>
                 </div>

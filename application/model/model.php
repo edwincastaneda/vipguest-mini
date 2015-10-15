@@ -127,4 +127,56 @@ class Model
         // fetch() is the PDO method that get exactly one result
         return $query->fetch()->amount_of_songs;
     }
+    
+        public function getAllCards($user_id)
+    {
+        $sql = "SELECT * FROM cards WHERE user_id=:user_id";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':user_id' => $user_id);
+        $query->execute($parameters);
+        return $query->fetchAll();
+    }
+
+    public function addCard($description, $init_date, $finish_date, $user_id)
+    {
+        $sql = "INSERT INTO cards (description, init_date, finish_date, user_id) VALUES (:description, :init_date, :finish_date, :user_id)";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':description' => $description, ':init_date' => $init_date, ':finish_date' => $finish_date, ':user_id' => $user_id);
+        $query->execute($parameters);
+    }
+    
+    public function deleteCard($card_id)
+    {
+        $sql = "DELETE FROM cards WHERE id = :card_id";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':card_id' => $card_id);
+        $query->execute($parameters);
+    }
+
+    public function getCard($card_id)
+    {
+        $sql = "SELECT id, description, init_date, finish_date FROM cards WHERE id = :card_id LIMIT 1";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':card_id' => $card_id);
+        $query->execute($parameters);
+        return $query->fetch();
+    }
+
+    public function updateCard($description, $init_date, $finish_date, $card_id)
+    {
+        $sql = "UPDATE cards SET description = :description, init_date = :init_date, finish_date = :finish_date WHERE id = :card_id";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':description' => $description, ':init_date' => $init_date, ':finish_date' => $finish_date, ':card_id' => $card_id);
+        $query->execute($parameters);
+        
+        // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
+    }
+
+    public function getAmountOfCards()
+    {
+        $sql = "SELECT COUNT(id) AS amount_of_cards FROM cards";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        return $query->fetch()->amount_of_cards;
+    }
 }

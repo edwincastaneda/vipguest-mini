@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'Poiret One';
+    src:url('../../../fonts/PoiretOne-Regular.ttf?ycmoy3') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poiret One', cursive;
+
+
+}
+
+a{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.float-left{
+    float:left;
+}
+
+.float-right{
+    float:right;
+}
+
+/* LAYOUTS */
+
+#wrap{
+    width: 100%;
+    height: 100%;
+    overflow: none;
+}
+
+#sidebar{
+    position:absolute;
+    width: 90px;
+    background: #061D25;
+    float:left;
+    height: 100%;
+    z-index: 1;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+}
+
+#sidebar:hover{
+    width: 250px;
+}
+
+#logo{
+    margin: 0 auto;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    font-size: 1.2em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+#menu-content{
+    color: #fff;
+    margin: 45px 25px 15px;
+    height: calc(100% - 145px);
+    text-align: center;
+}
+
+#menu{
+    margin:0;
+    padding:20px 0px;
+    list-style: none;
+    text-align: left;
+
+}
+
+.menu-item{
+    margin:20px 0px;
+}
+
+.menu-item a:hover{
+    color:#486D70;
+}
+
+.menu-title{
+    padding-left:25px;
+    display:none;
+}
+
+.icon{
+    font-size: 2.2em;
+}
+
+.menu-active{
+    color:#486D70;
+}
+
+
+
+#content{
+    float:left;
+    height: 100%;
+    width: 100%;
+}
+
+#card-title{
+    width: calc(100% - 90px);
+    height: 50px;
+    background: #1F3C46;
+    font-size: 1.2em;
+    line-height: 2.5em;
+    color:#fff;
+    margin-left:90px;
+}
+
+#card{
+    width: 100%;
+    height: calc(100% - 50px);
+    background: #486D70;
+    overflow:auto;
+    box-shadow: -1px 3px 5px #000;
+}
+
+#card-desc{
+    width: calc(50% - 25px);
+    padding-left: 25px;
+}
+
+#card-counter{
+    width:50%;
+}
+
+.counter{
+    margin:10px 0px 0px 80px;
+}
+
+.counter-data{
+    line-height: 18px;
+    font-size: 18px;
+    padding:0 10px;
+    text-align: center;
+}
+
+.counter-desc{
+    line-height: 14px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+#pagination{
+    width: 100%;
+    height:40px;
+    background: red;
+    bottom:0;
+    position: absolute;
+    margin-left:90px;
+}
+
+#page-left{
+    width:calc(50% - 45px);
+    height: 40px;
+    background:#1F3C46; 
+    line-height: 40px;
+}
+
+#page-right{
+    width:calc(50% - 45px);
+    height: 40px;
+    background:#1F3C46;
+    line-height: 40px;
+}
+
+/* ICONOS */
+
+@font-face {
+    font-family: 'vipguest';
+    src:url('../../../fonts/vipguest.eot?ycmoy3');
+    src:url('../../../fonts/vipguest.eot?#iefixycmoy3') format('embedded-opentype'),
+        url('../../../fonts/vipguest.ttf?ycmoy3') format('truetype'),
+        url('../../../fonts/vipguest.woff?ycmoy3') format('woff'),
+        url('../../../fonts/vipguest.svg?ycmoy3#vipguest') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'vipguest';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ring:before {
+    content: "\e600";
+}
+.icon-quotes:before {
+    content: "\e601";
+}
+.icon-car:before {
+    content: "\e602";
+}
+.icon-registry:before {
+    content: "\e603";
+}
+.icon-outfit:before {
+    content: "\e604";
+}
+.icon-rsvp:before {
+    content: "\e605";
+}
+.icon-playlist:before {
+    content: "\e606";
+}
+.icon-photoshoot:before {
+    content: "\e607";
+}
